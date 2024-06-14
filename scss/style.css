@@ -1,0 +1,1067 @@
+/*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  min-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+body .mainVisual {
+  position: relative;
+  background-image: url("../images/mainVisual_sp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  aspect-ratio: 390/450;
+}
+@media screen and (min-width: 768px) {
+  body .mainVisual {
+    background-image: url("../images/mainVisual_pc.png");
+    background-size: cover;
+    aspect-ratio: 1500/720;
+  }
+}
+body .mainVisual__container {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .mainVisual__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+body .mainVisual__title {
+  margin: 0 auto;
+  font-family: Marcellus;
+  font-weight: normal;
+  font-size: 1.5rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: #000;
+  padding-top: 5.3vw;
+}
+@media screen and (min-width: 768px) {
+  body .mainVisual__title {
+    font-size: 1.875rem;
+    padding-top: 1.8vw;
+    letter-spacing: 0.15em;
+  }
+}
+body .mainVisual__productName {
+  margin: 0 auto;
+  font-family: Marcellus;
+  font-weight: normal;
+  font-size: 2.5625rem;
+  letter-spacing: 0.3em;
+  color: #000;
+  padding-left: 5.6vw;
+  line-height: 12vw;
+  padding-top: 93.8vw;
+}
+@media screen and (min-width: 768px) {
+  body .mainVisual__productName {
+    max-width: 1200px;
+    font-size: 3.125rem;
+    line-height: 63.5px;
+    padding-top: 13.4vw;
+    padding-left: 4.7vw;
+  }
+}
+body .mainVisual__productName-serif {
+  width: 74.8vw;
+  padding-top: 0.7vw;
+  padding-left: 0.2vw;
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 1.25rem;
+  letter-spacing: 0.3em;
+  color: #000;
+}
+@media screen and (min-width: 768px) {
+  body .mainVisual__productName-serif {
+    max-width: 1200px;
+    font-size: 1.5625rem;
+    padding-top: 0;
+  }
+}
+body .purchase {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  body .purchase {
+    display: flex;
+    text-align: left;
+  }
+}
+body .purchase__container {
+  width: 91.7vw;
+  background-color: #F0F4FF;
+  margin: 10.7vw auto 12.8vw;
+  padding: 5.1vw 7.6vw 3vw;
+}
+@media screen and (min-width: 768px) {
+  body .purchase__container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 3.2vw auto;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .purchase__contents {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 2vw;
+  }
+}
+body .purchase__title {
+  font-family: "Noto Serif JP";
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+@media screen and (min-width: 768px) {
+  body .purchase__title {
+    font-family: "Noto Serif JP";
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1.0625rem;
+  }
+}
+body .purchase__price {
+  font-family: "Noto Serif JP";
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #111;
+  padding-top: 0.4375rem;
+}
+@media screen and (min-width: 768px) {
+  body .purchase__price {
+    font-size: 1rem;
+    padding-left: 1.0625rem;
+    padding-top: 0.625rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .purchase__list {
+    width: 47vw;
+    display: flex;
+    padding-top: 0.4vw;
+    padding-bottom: 2.8vw;
+  }
+}
+body .purchase__item {
+  display: flex;
+  width: 76.9vw;
+  height: 14.6vw;
+  border-radius: 7.4vw;
+  margin: 5.6vw auto;
+  justify-content: center;
+  font-family: "Noto Serif JP";
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #fff;
+  white-space: nowrap;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  body .purchase__item {
+    width: 20vw;
+    height: 3.8vw;
+    margin: 0;
+    margin-top: 2.7vw;
+    margin-left: 1.7vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .purchase__item:last-child {
+    padding-left: 0.8vw;
+    margin-right: 54px;
+    margin-left: 34px;
+  }
+}
+body .purchase__item-blue {
+  background-color: #46C4DB;
+}
+body .purchase__item-green {
+  background-color: #5DD5AB;
+}
+body .product {
+  background-image: url(../images/product.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 390/680;
+}
+@media screen and (min-width: 768px) {
+  body .product {
+    position: relative;
+    background-image: url(../images/product_pc.png);
+    aspect-ratio: 1500/550;
+  }
+}
+body .product__container {
+  width: 91.7vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .product__container {
+    position: absolute;
+    width: 44.1vw;
+    top: 9vw;
+    left: 55.2vw;
+  }
+}
+body .product__title {
+  font-family: "EB Garamond";
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 13.5vw;
+}
+@media screen and (min-width: 768px) {
+  body .product__title {
+    font-size: 2.375rem;
+    line-height: 2.375rem;
+    text-align: left;
+    color: #fff;
+    padding-top: 0;
+  }
+}
+body .product__titleSerif {
+  font-family: "Noto Serif JP";
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 4.8vw;
+}
+@media screen and (min-width: 768px) {
+  body .product__titleSerif {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    text-align: left;
+    color: #fff;
+    padding-top: 1.1vw;
+  }
+}
+body .product__text {
+  margin: 0 auto;
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 2rem;
+  text-align: left;
+  color: #fff;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  padding-top: 4.8vw;
+}
+@media screen and (min-width: 768px) {
+  body .product__text {
+    width: 28.1vw;
+    margin: 0;
+    padding-top: 1.6vw;
+  }
+}
+body .voice {
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 19.2vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice {
+    padding-bottom: 7.6vw;
+  }
+}
+body .voice__container {
+  width: 72.5vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .voice__container {
+    width: 65.3vw;
+    margin: 0 auto;
+    padding-top: 0.2vw;
+  }
+}
+body .voice__title {
+  font-family: "EB Garamond";
+  font-weight: bold;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: center;
+  color: #000;
+  padding-top: 14.3vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice__title {
+    font-size: 2.8125rem;
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+    text-align: center;
+    color: #000;
+    padding-top: 6.2vw;
+  }
+}
+body .voice__titleSerif {
+  font-family: "Noto Serif JP";
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: center;
+  color: #000;
+  padding-top: 0.5vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice__titleSerif {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+    text-align: center;
+    color: #000;
+    padding-top: 1.3vw;
+  }
+}
+body .voice__list {
+  padding-top: 8.2vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice__list {
+    width: 65.3vw;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    margin: 0 auto;
+  }
+}
+body .voice__carousel {
+  width: 71.7vw;
+  background-color: #DBF7F9;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .voice__carousel {
+    margin: 0;
+    margin-top: 0.8vw;
+  }
+}
+body .voice .swiper-slide {
+  aspect-ratio: 280/340;
+}
+@media screen and (min-width: 768px) {
+  body .voice .swiper-slide {
+    aspect-ratio: 300/382;
+  }
+}
+body .voice__carouselImagePc {
+  display: flex;
+  width: 33%;
+  margin: 6.4vw auto 0;
+  padding-top: 1vw;
+  padding-left: 3.3vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice__carouselImagePc {
+    display: flex;
+    margin: 2vw auto 0;
+    padding-top: 0.4vw;
+    padding-left: 0;
+  }
+}
+body .voice__carouselName {
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: center;
+  color: #000;
+  padding-top: 0.5vw;
+  padding-left: 0.7vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice__carouselName {
+    font-size: 0.9375rem;
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+    text-align: center;
+    color: #000;
+    padding-top: 0.2vw;
+    padding-left: 0;
+  }
+}
+body .voice__carouselText {
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  text-align: left;
+  color: #000;
+  width: 64.1vw;
+  padding-top: 2.5vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .voice__carouselText {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: left;
+    color: #000;
+    width: 17.9vw;
+    padding-left: 0;
+    padding-top: 0.4vw;
+  }
+}
+body .voice .swiper-pagination {
+  position: absolute;
+  bottom: 12.3vw;
+}
+@media screen and (min-width: 768px) {
+  body .voice .swiper-pagination {
+    bottom: 5.2vw;
+  }
+}
+body .voice .swiper-button-prev {
+  font-size: 2.0625rem;
+  position: absolute;
+  top: 57%;
+  left: 4%;
+  color: #00AFBF;
+}
+@media screen and (min-width: 768px) {
+  body .voice .swiper-button-prev {
+    font-size: 3rem;
+    top: 63%;
+    left: 11.5%;
+  }
+}
+body .voice .swiper-button-prev:after {
+  display: none;
+}
+body .voice .swiper-button-next {
+  font-size: 2.0625rem;
+  position: absolute;
+  top: 57%;
+  right: 5.5%;
+  color: #00AFBF;
+}
+@media screen and (min-width: 768px) {
+  body .voice .swiper-button-next {
+    font-size: 3rem;
+    top: 63%;
+    right: 12.9%;
+  }
+}
+body .voice .swiper-button-next:after {
+  display: none;
+}
+body .faq {
+  margin: 0 auto;
+  padding-bottom: 8.2vw;
+  background: linear-gradient(#f4ffe8 0%, #c6f0fe 100%);
+}
+body .faq__title {
+  font-family: "EB Garamond";
+  font-weight: bold;
+  font-size: 1.875rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: center;
+  color: #000;
+  padding-top: 9.4vw;
+}
+@media screen and (min-width: 768px) {
+  body .faq__title {
+    font-size: 2.8125rem;
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+    text-align: center;
+    color: #000;
+    padding-top: 3.4vw;
+  }
+}
+body .faq__titleSerif {
+  font-family: "Noto Serif JP";
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: center;
+  color: #000;
+  padding-top: 0.5vw;
+}
+@media screen and (min-width: 768px) {
+  body .faq__titleSerif {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    line-height: 2rem;
+    text-align: center;
+    color: #000;
+    padding-top: 1.3vw;
+  }
+}
+body .faq__container {
+  width: 91.7vw;
+  margin: 8.4vw auto;
+}
+@media screen and (min-width: 768px) {
+  body .faq__container {
+    width: 40vw;
+    margin: 0 auto;
+    padding-top: 2.6vw;
+  }
+}
+body .faq__list {
+  background-color: #ffffff;
+  font-family: "Noto Serif JP";
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.75rem;
+  text-align: left;
+  color: #444;
+  margin: 0 auto 5.3vw;
+}
+body .faq__question::before {
+  content: "Q.";
+  font-family: "EB Garamond";
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 2rem;
+  text-align: left;
+  color: #444;
+  padding-right: 4.3vw;
+}
+body .faq__question {
+  width: 83.3vw;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 4.3vw;
+  padding-bottom: 3.3vw;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  body .faq__question {
+    width: 36.7vw;
+    padding-top: 1.4vw;
+  }
+}
+body .faq__question::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d7";
+  font-weight: 900;
+  position: absolute;
+  top: 22%;
+  right: 0;
+}
+body .faq__question.active::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d8";
+  font-weight: 900;
+  position: absolute;
+  top: 22%;
+  right: 0;
+}
+body .faq__answer::before {
+  content: "A.";
+  font-family: "EB Garamond";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: left;
+  color: #444;
+  padding-right: 6.1vw;
+}
+@media screen and (min-width: 768px) {
+  body .faq__answer::before {
+    padding-left: 0.2vw;
+  }
+}
+body .faq__answer {
+  display: flex;
+  width: 83.3vw;
+  margin: 0 auto;
+  font-family: "Noto Serif JP";
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.06em;
+  line-height: 1.75rem;
+  text-align: left;
+  color: #000;
+  padding-bottom: 7.4vw;
+}
+@media screen and (min-width: 768px) {
+  body .faq__answer {
+    width: 36.7vw;
+    padding-top: 0.1vw;
+    padding-bottom: 1.4vw;
+  }
+}
+body .footer {
+  background-color: #0071CE;
+  aspect-ratio: 390/165;
+}
+@media screen and (min-width: 768px) {
+  body .footer {
+    aspect-ratio: 1500/104;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 1.7vw;
+  }
+}
+body .footer__title {
+  font-family: Marcellus;
+  font-weight: normal;
+  font-size: 1.75rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  text-align: center;
+  padding-top: 6.1vw;
+}
+@media screen and (min-width: 768px) {
+  body .footer__title {
+    width: 29.6vw;
+    font-family: Marcellus;
+    font-weight: normal;
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    text-align: center;
+    color: #fff;
+    padding-top: 0;
+    padding-left: 2.1vw;
+  }
+}
+body .footer__nav {
+  width: 76.9vw;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  body .footer__nav {
+    width: 22.9vw;
+    margin: 0;
+  }
+}
+body .footer__list {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6.1vw;
+}
+@media screen and (min-width: 768px) {
+  body .footer__list {
+    padding-top: 0;
+    line-height: 3.5em;
+  }
+}
+body .footer__item {
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 0.75rem;
+  text-align: left;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  body .footer__item {
+    font-family: "Noto Serif JP";
+    font-weight: normal;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #fff;
+  }
+}
+body .footer__copyright {
+  font-family: "Noto Serif JP";
+  font-weight: normal;
+  font-size: 0.6875rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 6.4vw;
+}
+@media screen and (min-width: 768px) {
+  body .footer__copyright {
+    font-family: "Noto Serif JP";
+    font-weight: normal;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #fff;
+    padding-top: 1.5vw;
+    padding-left: 4.8vw;
+  }
+}/*# sourceMappingURL=style.css.map */
