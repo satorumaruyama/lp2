@@ -1,23 +1,24 @@
 // カルーセル
-new Swiper('.swiper', {
-    slidesPerView: 'auto',
-    spaceBetween: 35,
-    breakpoints: {
-        390: {
-            slidesPerView: 1,
-        },
-        768: {
-            slidesPerView: 3,
-      },
-    },
-    pagination: {
-      el: '.swiper-pagination',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+$('.voice__list').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  prevArrow:'<i class="fas fa-arrow-circle-left"></i>',
+  nextArrow:'<i class="fas fa-arrow-circle-right"></i>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+});
+
+
 
 // アコーディオン
 $('.faq__answer').hide();

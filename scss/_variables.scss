@@ -1,5 +1,5 @@
 $pc:768px;
-$tab:1200px;
+$md:1250px;
 
 @mixin mq($bp) {
     @media screen and (min-width: $bp) {
@@ -7,3 +7,12 @@ $tab:1200px;
         
     }
 }
+
+@mixin middle($min, $max) {
+    @media screen and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+
+
