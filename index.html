@@ -46,13 +46,20 @@
                 <p class="purchase__price">税込 4,000円</p>
             </div>
             <ul class="purchase__list">
-                <li class="purchase__item purchase__item-blue">
+                <li class="purchase__item -blue">
                     <a href="">オンラインショップへ</a>
                 </li>
-                <li class="purchase__item purchase__item-green">
-                    <a href="">購入する</a>
-                </li>
+                <form action="cart/" method="post" class="purchase__item -green">
+                        <button type="button">購入する</button>
+                </form>
             </ul>
+
+
+            <!-- <li class="purchase__item -green">
+                <form action="cart/">
+                    <button type="button">購入する</button>
+                </form>
+            </li> -->
         </div>
     </section>
 
@@ -157,10 +164,10 @@
                 <p class="purchase__price">税込 4,000円</p>
             </div>
             <ul class="purchase__list">
-                <li class="purchase__item purchase__item-blue">
+                <li class="purchase__item -blue">
                     <a href="">オンラインショップへ</a>
                 </li>
-                <li class="purchase__item purchase__item-green">
+                <li class="purchase__item -green">
                     <a href="">購入する</a>
                 </li>
             </ul>
@@ -173,9 +180,9 @@
             <h2 class="footer__title">Kira-meki</h2>
             <nav class="footer__nav">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="">会社概要</a></li>
-                    <li class="footer__item"><a href="">個人情報保護ポリシー</a></li>
-                    <li class="footer__item"><a href="">お問い合わせ</a></li>
+                    <li class="footer__item"><a href="company/">会社概要</a></li>
+                    <li class="footer__item"><a href="privacy-policy/">個人情報保護ポリシー</a></li>
+                    <li class="footer__item"><a href="contact/">お問い合わせ</a></li>
                 </ul>
             </nav>
             <p class="footer__copyright">© 2023 Kira-meki Inc. All rights reserved.</p>
