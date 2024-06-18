@@ -1,12 +1,15 @@
 // カルーセル
-$('.voice__list').slick({
+$('.slick-container').slick({
+  arrows: true,
   dots: true,
   infinite: false,
   speed: 300,
   slidesToShow: 3,
-  slidesToScroll: 3,
-  prevArrow:'<i class="fas fa-arrow-circle-left"></i>',
-  nextArrow:'<i class="fas fa-arrow-circle-right"></i>',
+  slidesToScroll: 2,
+  variableWidth: true,
+  // appendArrows: $('.slider-arrows'),
+  // prevArrow:'<i class="fas fa-arrow-circle-left"></i>',
+  // nextArrow:'<i class="fas fa-arrow-circle-right"></i>',
   responsive: [
     {
       breakpoint: 768,
