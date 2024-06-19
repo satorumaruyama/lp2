@@ -255,9 +255,9 @@ body {
 
     .voice {
         margin: 0 auto;
-        padding-bottom: 8.2vw;
+        padding-bottom: 9.2vw;
         @include mq($pc) {
-            padding-bottom: 3.6vw;
+            padding-bottom: 5.2vw;
         }
         &__title {
             font-family: "EB Garamond";
@@ -299,311 +299,148 @@ body {
             width: 72.5vw;
             margin: 9.4vw auto;
             @include mq($pc) {
-                width: 980px;
-                margin: 34px auto 34px;
+                width: 65.3vw;
+                margin: 2.2vw auto 2.2vw;
                 display: flex;
                 justify-content: space-between;
             }
         }
         .slick-slide {
-            // visibility: hidden;
             background-color: #DBF7F9;
-            width: 280px;
+            width: 71.7vw;
             margin: 0 auto;
             @include mq($pc) {
-                width: 300px;
-                padding-top: 1.3rem;
-                margin-right: 40px;
+                width: 20vw;
+                padding-top: 1.3vw;
+                margin-right: 2.6vw;
             }
         }
         .slick-slide.slick-initialized {
             visibility: visible;
         }
         .slick-img {
-            margin: 26px auto 0;
-            width: 80px;
-            height: 80px;
+            margin: 6.6vw auto 0;
+            width: 20.5vw;
+            height: 20.5vw;
             text-align: center;
+            margin-left: 27.1vw;
             @include mq($pc) {
-                width: 100px;
-                height: 100px;
+                margin: 1.7vw auto 0;
+                width: 6.6vw;
+                height: 6.6vw;
             }
         }
         .slick-name {
             font-family: "Noto Serif JP";
             font-weight: normal;
-            font-size: 14px;
+            font-size: 0.875rem;
             letter-spacing: 0.05em;
-            line-height: 32px;
+            line-height: 2rem;
             text-align: center;
             color: #000;
+            padding-left: 1vw;
             @include mq($pc) {
-                font-size: 15px;                
+                font-size: 0.9375rem;
+                padding-left: 0;
+                padding-top: 0.2vw;                
             }
             
         }
         .slick-text {
-            width: 250px;
-            margin: 10px auto 26px;
+            width: 64.1vw;
+            margin: 2.5vw auto 6.6vw;
             font-family: "Noto Serif JP";
             font-weight: normal;
-            font-size: 14px;
-            line-height: 28px;
+            font-size: 0.875rem;
+            line-height: 1.75rem;
             text-align: left;
             color: #000;
             @include mq($pc) {
-                width: 268px;
-                font-size: 16px;
-
-                
+                width: 17.8vw;
+                font-size: 1rem;
+                margin: 0.8vw auto 2.5vw;  
             }
             
         }
         // 装飾
-        .slider-arrows {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
+        .slide{
+            opacity: 0;
+            transition: opacity .3s linear;
         }
-
-        .slick-prev {
-            content: "\f0a8";
-
-            color: #00AFBF;
+        .slide.slick-initialized{
+            opacity: 1;
+        }
+        /* スライダー同士のmargin */
+        .slick-container .slick-slide{
             @include mq($pc) {
-
+                margin: -0.2vw 2vw 0 0.5vw;
+                padding-bottom: 0;
             }
         }
-        // .fa-arrow-circle-left:before {
-        //     content: "\f0a8";
-        //     position: absolute;
-        //     font-size: 2.1875rem;
-        //     top: 48%;
-        //     left: -14%;
-        //     color: #00AFBF;
-        //     @include mq($pc) {
-        //         top: -17vw;
-        //         left: 11.5vw;
-        //         font-size: 2.9375rem;
-        //     }
-        // }
-        .fa-arrow-circle-right:before {
-            content: "\f0a9";
+        /* ここから矢印カスタマイズ */
+        .slick-container .slick-arrow {
             position: absolute;
-            font-size: 2.1875rem;
-            top: 48%;
-            right: -14%;
-            color: #00AFBF;
+            top: 45%;
             @include mq($pc) {
-                top: -17vw;
-                right: 11.5vw;
+                top: 51%;
+                transition: all  0.5s;
+                transform: translateY(-50%);
+                z-index: 10;
+            }
+        }
+        .slick-container .slick-arrow:hover{
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .slick-container .prev-arrow {
+            left: -9.2vw;
+            @include mq($pc) {
+                left: -6vw;
+            }
+        }
+        .slick-container .next-arrow {
+            right: -9.7vw;
+            @include mq($pc) {
+                right: -5.8vw;
+            }
+        }
+        .slick-container .prev-arrow:before,
+        .slick-container .next-arrow:before{
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            color: #00AFBF;
+            font-size: 1.9375rem;
+            @include mq($pc) {
                 font-size: 2.9375rem;
             }
         }
+        .slick-container .prev-arrow:before{
+            content: "\f0a8";
+        }
+        .slick-container .next-arrow:before{
+            content: "\f0a9";
+        }
+        .slick-dots {
+            bottom: -7.6vw;
+            @include mq($pc) {
+            bottom: -2.8vw;
+            }
+        }
+        .slick-dots li {
+            width: 4.3vw;
+            margin: 0;
+            @include mq($pc) {
+                width: 1.3vw;
+            }
+        }
         .slick-dots li button:before{
-            font-size:0.4375rem!important;
-
+            font-size:0.6375rem!important;
             @include mq($pc) {
                 font-size: 0.6875rem!important;
             }
         }
 
     }
-    // .voice {
-    //     margin: 0 auto;
-    //     padding-bottom: 8.2vw;
-    //     @include mq($pc) {
-    //         padding-bottom: 3.6vw;
-    //     }
-    //     &__container {
-    //         width: 72.5vw;
-    //         margin: 9.4vw auto;
-    //         @include mq($pc) {
-    //             width: 65.3vw;
-    //             margin: 0 auto;
-    //             padding-top: 0.2vw;
-    //         }
-    //     }
-    //     &__title {
-    //         font-family: "EB Garamond";
-    //         font-weight: bold;
-    //         font-size: 1.875rem;
-    //         letter-spacing: 0.05em;
-    //         line-height: 2rem;
-    //         text-align: center;
-    //         color: #000;
-    //         padding-top: 13.3vw;            
-    //         @include mq($pc) {
-    //             font-size: 2.8125rem;
-    //             letter-spacing: 0.05em;
-    //             line-height: 2rem;
-    //             text-align: center;
-    //             color: #000;
-    //             padding-top: 6.2vw;
-    //         }
-    //     }
-    //     &__titleSerif {
-    //         font-family: "Noto Serif JP";
-    //         font-weight: 600;
-    //         font-size: 1rem;
-    //         letter-spacing: 0.05em;
-    //         line-height: 2rem;
-    //         text-align: center;
-    //         color: #000;
-    //         padding-top: 0.3vw;
-    //         @include mq($pc) {
-    //             font-size: 1.25rem;
-    //             letter-spacing: 0.05em;
-    //             line-height: 2rem;
-    //             text-align: center;
-    //             color: #000;
-    //             padding-top: 1.3vw;
-    //         }
-    //     }
-    //     &__list {
-    //         visibility: hidden;
-    //         @include mq($pc) {
-    //             width: 69vw;
-    //             display: flex;
-    //             justify-content: space-between;
-    //             padding-top: 1.5rem;
-    //             margin: 0 auto;
-    //         }
-    //     }
-    //     &__list.slick-initialized {
-    //         visibility: visible;
-    //     }
-    //     &__carousel {
-    //         width: 71.7vw;
-    //         background-color: #DBF7F9;
-    //         margin: 0 auto 0.7vw;
-    //         padding-bottom: 6.6vw;
-    //         @include mq($pc) {
-    //             width: 19.7vw;
-    //             margin: 0;
-    //             margin-top: 0.8vw;
-    //         }
-    //     }
-    //     .slick-slide {
-    //         margin-right: 0.5vw;
-    //         @include mq($pc) {
-    //             padding-bottom: 3.2vw;
-    //             margin-right: 2.6vw;
-    //         }
-    //     }
-    //     &__carouselImagePc {
-    //         display: flex;
-    //         width: 33%;
-    //         margin: 6.4vw auto 0;
-    //         padding-left: 3.3vw;
-    //         @include mq($pc) {  
-    //             display: flex;
-    //             margin: 2vw auto 0;
-    //             padding-top: 0.4vw;
-    //             padding-left: 0;
-    //         }
-    //     }
-    //     &__carouselName {
-    //         font-family: "Noto Serif JP";
-    //         font-weight: normal;
-    //         font-size: 0.875rem;
-    //         letter-spacing: 0.05em;
-    //         line-height: 2rem;
-    //         text-align: center;
-    //         color: #000;
-    //         padding-top: 0.5vw;
-    //         padding-left: 0.7vw;
-    //         @include mq($pc) {
-    //             font-size: 0.9375rem;
-    //             letter-spacing: 0.05em;
-    //             line-height: 2rem;
-    //             text-align: center;
-    //             color: #000;
-    //             padding-top: 0.2vw;
-    //             padding-left: 0;
-                
-    //         }       
-    //     }
-    //     &__carouselText {
-    //         font-family: "Noto Serif JP";
-    //         font-weight: normal;
-    //         font-size: 0.875rem;
-    //         line-height: 1.75rem;
-    //         text-align: left;
-    //         color: #000;
-    //         width: 64.1vw;
-    //         padding-top: 2.5vw;
-    //         margin: 0 auto;
-    //         @include mq($pc) {
-    //             font-size: 1rem;
-    //             line-height: 1.75rem;
-    //             text-align: left;
-    //             color: #000;
-    //             width: 17.9vw;
-    //             padding-left: 0;
-    //             padding-top: 0.4vw;     
-    //         }
-    //     }
-    //     .slider-arrows {
-    //         position: relative;
-    //     }
-    //     .fa-arrow-circle-left:before {
-    //         content: "\f0a8";
-    //         position: absolute;
-    //         font-size: 2.1875rem;
-    //         top: 48%;
-    //         left: -14%;
-    //         color: #00AFBF;
-    //         @include mq($pc) {
-    //             top: -17vw;
-    //             left: 11.5vw;
-    //             font-size: 2.9375rem;
-
-    //         }
-    //     }
-    //     .fa-arrow-circle-right:before {
-    //         content: "\f0a9";
-    //         position: absolute;
-    //         font-size: 2.1875rem;
-    //         top: 48%;
-    //         right: -14%;
-    //         color: #00AFBF;
-    //         @include mq($pc) {
-    //             top: -17vw;
-    //             right: 11.5vw;
-    //             font-size: 2.9375rem;
-    //         }
-    //     }
-    //     .slick-dots li button:before{
-    //         font-size:0.4375rem!important;
-
-    //         @include mq($pc) {
-    //             font-size: 0.6875rem!important;
-    //             top: 1px;
-    //             left: 28px;
-    //         }
-    //     }
-    //     .slick-dots li button:before:last-child {
-    //         @include mq($pc) {
-    //             top: 1px;
-    //             right: 10px;
-    //         }
-    //     }
-    //     .slick-dots li {
-    //         position: relative;
-    //         display: inline-block;
-    //         width: 2.3vw;
-    //         height: 6.9vw;
-    //         padding: 0;
-    //         cursor: pointer;
-    //     }
-    //     .slick-dots {
-    //         @include mq($pc) {
-    //             width: 93%;
-    //             bottom: -27%;
-    //         }
-    //     }
-    // }
 
     .faq {
         margin: 0 auto;
@@ -627,7 +464,7 @@ body {
                 line-height: 2rem;
                 text-align: center;
                 color: #000;
-                padding-top: 3vw;
+                padding-top: 3.5vw;
             }
         }
         &__titleSerif {
@@ -650,7 +487,7 @@ body {
         }
         &__container {
             width: 91.7vw;
-            margin: 8.4vw auto;
+            margin: 8.9vw auto;
             @include mq($pc) {
                 width: 40vw;
                 margin: 0 auto;
@@ -800,7 +637,7 @@ body {
             }
         }
         &__nav {
-            width: 74.9vw;
+            width: 76.5vw;
             margin: 0 auto;
             @include mq($pc) {
                 margin: 0;

@@ -5,11 +5,10 @@ $('.slick-container').slick({
   infinite: false,
   speed: 300,
   slidesToShow: 3,
-  slidesToScroll: 2,
+  slidesToScroll: 3,
   variableWidth: true,
-  // appendArrows: $('.slider-arrows'),
-  // prevArrow:'<i class="fas fa-arrow-circle-left"></i>',
-  // nextArrow:'<i class="fas fa-arrow-circle-right"></i>',
+  prevArrow: '<span class="slide-arrow prev-arrow"></span>',
+  nextArrow: '<span class="slide-arrow next-arrow"></span>',
   responsive: [
     {
       breakpoint: 768,
